@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Activity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-7">
+			<div class="page-header">
+			<h1><img src="/home/rakif/Documents/fnf/logo-viit.png" height="50px" width="50px" alt="" align="middle"/>  Student Affairs</h1></div>		<br>
+			<table class="table table-striped">
+				<thead>
+				<tr class="success" text-align="center">
+					<th colspan="3">Dean Student Affair</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td width="18%" rowspan="9" align="center" valign="top"  ><img src="/home/rakif/Documents/fnf/1425561305-1319907289.jpg" width="110" height="140"/></td>
+              		<td colspan="2"><strong>RAVINDRA SHRIRAM ACHARYA</strong></td>
+            	</tr>
+				<tr>
+		          	<td colspan="2"><strong>PROFESSOR</strong></td>
+		        </tr>
+		        <tr>
+		          	<td width="25%"><strong>Qualification</strong></td>
+				  	<td>Ph.D. Mathematics<br>Pune University at DIAT, Pune, 2007<br></td>
+		        </tr>
+		        <tr>
+		          <td width="25%"><strong>Experience</strong></td>
+				  <td>28 Years<br>
+				  </td>
+		        </tr>
+		        <tr>
+		          <td width="25%"><strong>Area of Interest</strong></td>
+				  <td>APPLIED MATHEMATICS, Ballistics  </td>
+		        </tr>
+		        <tr>
+		          <td width="25%"><strong>Email ID</strong></td>
+				  <td>ravisacharya@gmail.com </td>
+		        </tr>
+		        <tr>
+		          <td width="25%"><strong>Contact No</strong></td>
+				  <td>(+91)-(020) 26950430 </td>
+				</tr>				
+			</table>
+			<br><br>
+			<h2>Student Council A. Y. 2015-16</h2>
+			<table class="table table-striped">
+			<thead>
+			<thead>
+			<tr>
+			<th>Sr. No</th>
+			<th>Name</th>
+			<th>Designation</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+			<td>1</td>
+			<td>Ram S. Suryawanshi</td>
+			<td>University Representative</td>
+			</tr>
+
+			<tr>
+			<td>2</td>
+			<td>Amit Rathod</td>
+			<td>General Secretary</td>
+			</tr>
+
+			<tr>
+			<td>3</td>
+			<td>Madhulika Jhawar </td>
+			<td>Ladies Representative</td>
+			</tr>
+
+			<tr>
+			<td>4</td>
+			<td>Sarang Kokate</td>
+			<td>Joint Student Council Head</td>
+			</tr>
+
+			<tr>
+			<td>5</td>
+			<td>Sanket Raut</td>
+			<td>Joint General Secretary</td>
+			</tr>
+
+			<tr>
+			<td>6</td>
+			<td>Srihita Motadoo</td>
+			<td>Joint Ladies Representative</td>
+			</tr>
+
+			</tbody>
+			</table>
+		</div>
+		<div class="col-md-5">
+			<br><br><br><br><br>
+			<div class="jumbotron">
+				<h2>Student Activities</h2>
+				<ul>
+				  <li><a href="http://www.viit.ac.in/NSS/index.html">National Service Scheme-NSS</a></li>
+				  <li><a>Avishkar</a>
+				  <ul>
+				  <li><a href="stud-activity-firodia.html">Firodia Karandak</a></li>
+				  <li><a href="stud-activity-purushottam.html">Purushottam Karandak</a></li>
+				  <li><a href="stud-activity-suman.html">Suman Karandak</a></li>
+				  </ul>
+				  </li>
+				  <li><a href="http://www.viit.ac.in/IEEE/index.html">IEEE Student Branch</a></li>
+				  <li><a href="stud-activity-perception.html">Perception</a></li>
+				  <li><a href="stud-activity-gandharv15-16.html">Gandharv 2015-16</a></li>
+				  <li><a href="http://www.viit.ac.in/sports.html">Sports</a></li>
+				  <li><a href="stud-activity-magazine.html">Magazine</a></li>
+				  <li><a href="stud-activity-value-education.html">Value Education Club</a></li>
+				  <li><a href="stud-activity-competative-exam.html">Competative Examination Cell</a></li>
+				  <li class="last"><a href="http://edcviit.com/">Entrepreneurship Development Cell</a></li>
+				  <li><a href="http://www.viit.ac.in/enas-dept-SCITech.html">Scitech</a></li>
+				</ul>
+			</div>
+		</div>
+		</div>
+	</div>
+	<p id="notice"><%= notice %></p>
+
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Designation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.designation %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>
+
+</body>
+</html>	
+			
